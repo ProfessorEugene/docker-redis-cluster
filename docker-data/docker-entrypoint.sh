@@ -12,6 +12,7 @@ if [ "$1" = 'redis-cluster' ]; then
 
     #use host networking to set up the cluster
     IP=`ifconfig | grep "inet addr" | grep -v "127.0.0.1" | grep -v "17" | cut -f2 -d ":" | cut -f1 -d " "`
+    export BIND_IP=${IP}
     for port in `seq 7000 7005`; do
       PORT=${port} envsubst < /redis-conf/redis-cluster.tmpl > /redis-conf/${port}/redis.conf
     done
