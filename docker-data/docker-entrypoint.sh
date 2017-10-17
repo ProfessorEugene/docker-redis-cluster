@@ -21,7 +21,7 @@ if [ "$1" = 'redis-cluster' ]; then
     sleep 3
 
     
-    echo "yes" | ruby /redis/src/redis-trib.rb create --replicas 1 ${DOCKER_IP}:7000 ${DOCKER_IP}:7001 ${DOCKER_IP}:7002 ${DOCKER_IP}:7003 ${DOCKER_IP}:7004 ${DOCKER_IP}:7005
+    echo "yes" | ruby /redis/src/redis-trib.rb create --replicas 1 ${IP}:7000 ${IP}:7001 ${IP}:7002 ${IP}:7003 ${IP}:7004 ${IP}:7005
     tail -f /var/log/supervisor/redis*.log
 else
   exec "$@"
