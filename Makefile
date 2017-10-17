@@ -1,6 +1,6 @@
-CID_FILE = /tmp/ProfessorEugene-redis-cluster.cid
+CID_FILE = /tmp/professoreugene-redis-cluster.cid
 CID =`cat $(CID_FILE)`
-IMAGE_NAME = ProfessorEugene/redis-cluster
+IMAGE_NAME = professoreugene/redis-cluster
 PORTS = -p 7000:7000 -p 7001:7001 -p 7002:7002 -p 7003:7003 -p 7004:7004 -p 7005:7005
 
 help:
