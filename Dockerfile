@@ -33,7 +33,6 @@ RUN mkdir /redis-conf
 RUN mkdir /redis-data
 
 COPY ./docker-data/redis-cluster.tmpl /redis-conf/redis-cluster.tmpl
-COPY ./docker-data/redis.tmpl /redis-conf/redis.tmpl
 
 # Add supervisord configuration
 COPY ./docker-data/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
