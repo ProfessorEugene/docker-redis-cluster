@@ -17,11 +17,11 @@ RUN locale-gen en_US.UTF-8
 ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 
-RUN gem install redis
+RUN gem install redis -v 3.3.3
 
 RUN apt-get install -y gcc make g++ build-essential libc6-dev tcl git supervisor ruby
 
-ARG redis_version=3.2.7
+ARG redis_version=3.3.3
 
 RUN wget -qO redis.tar.gz http://download.redis.io/releases/redis-${redis_version}.tar.gz \
     && tar xfz redis.tar.gz -C / \
