@@ -27,7 +27,7 @@ rebuild:
 
 run:
 	@echo "Running docker image..."
-	docker run --network=host -d $(PORTS) --cidfile $(CID_FILE) -i -t ${IMAGE_NAME}
+	docker run --net=host -d $(PORTS) --cidfile $(CID_FILE) -i -t ${IMAGE_NAME}
 
 bash:
 	docker exec -it $(CID) /bin/bash
